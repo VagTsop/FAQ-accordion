@@ -1,0 +1,108 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+    background-color: hsl(275, 100%, 97%);
+    background-image: url('./assets/images/background-pattern-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+  }
+  
+  @media (min-width: 768px) {
+    body {
+      background-image: url('./assets/images/background-pattern-desktop.svg');
+      background-size: contain;
+    }
+  }
+  
+  .accordion-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .accordion {
+    background: white;
+    border-radius: 1rem;
+    max-width: 600px;
+    width: 100%;
+    padding: 2rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 200px;
+  }
+  
+  .accordion-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .accordion-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: hsl(292, 42%, 14%);
+  }
+  
+  .star-icon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .accordion-item + .accordion-item {
+    margin-top: 1.5rem;
+    border-top: 1px solid hsl(275, 100%, 97%);
+    padding-top: 1.5rem;
+  }
+  
+  .accordion-question {
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: hsl(292, 42%, 14%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.2s ease;
+  }
+  
+  .accordion-question:hover,
+  .accordion-question:focus {
+    color: hsl(281, 83%, 54%);
+    outline: none;
+  }
+  
+  .accordion-answer {
+    margin-top: 1rem;
+    color: hsl(292, 16%, 49%);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.6;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }  
+  
